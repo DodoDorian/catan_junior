@@ -1,0 +1,64 @@
+\doxysection{include/\+Logger.hpp File Reference}
+\hypertarget{Logger_8hpp}{}\label{Logger_8hpp}\index{include/Logger.hpp@{include/Logger.hpp}}
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+Include dependency graph for Logger.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classLogger}{Logger}}
+\begin{DoxyCompactList}\small\item\em A singleton logger class for logging messages to a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{Logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9}{Log\+Level}} \{ \newline
+\mbox{\hyperlink{Logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9a0593585da9181e972974c1274d8f2b4f}{DEBUG}}
+, \mbox{\hyperlink{Logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9a748005382152808a72b1a9177d9dc806}{INFO}}
+, \mbox{\hyperlink{Logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9a984de77c680eaff141ec910e25568a81}{WARNING}}
+, \mbox{\hyperlink{Logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9a2fd6f336d08340583bd620a7f5694c90}{ERROR}}
+, \newline
+\mbox{\hyperlink{Logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9acda21a4a072f2261f6d4ab596599f8b0}{CRITICAL}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for log levels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{Logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9}\label{Logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9} 
+\index{Logger.hpp@{Logger.hpp}!LogLevel@{LogLevel}}
+\index{LogLevel@{LogLevel}!Logger.hpp@{Logger.hpp}}
+\doxysubsubsection{\texorpdfstring{LogLevel}{LogLevel}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{Logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9}{Log\+Level}}}
+
+
+
+Enumeration for log levels. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEBUG@{DEBUG}!Logger.hpp@{Logger.hpp}}\index{Logger.hpp@{Logger.hpp}!DEBUG@{DEBUG}}}\Hypertarget{Logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9a0593585da9181e972974c1274d8f2b4f}\label{Logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9a0593585da9181e972974c1274d8f2b4f} 
+DEBUG&Debugging information. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INFO@{INFO}!Logger.hpp@{Logger.hpp}}\index{Logger.hpp@{Logger.hpp}!INFO@{INFO}}}\Hypertarget{Logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9a748005382152808a72b1a9177d9dc806}\label{Logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9a748005382152808a72b1a9177d9dc806} 
+INFO&Informational messages. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WARNING@{WARNING}!Logger.hpp@{Logger.hpp}}\index{Logger.hpp@{Logger.hpp}!WARNING@{WARNING}}}\Hypertarget{Logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9a984de77c680eaff141ec910e25568a81}\label{Logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9a984de77c680eaff141ec910e25568a81} 
+WARNING&Warning messages. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ERROR@{ERROR}!Logger.hpp@{Logger.hpp}}\index{Logger.hpp@{Logger.hpp}!ERROR@{ERROR}}}\Hypertarget{Logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9a2fd6f336d08340583bd620a7f5694c90}\label{Logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9a2fd6f336d08340583bd620a7f5694c90} 
+ERROR&Error messages. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CRITICAL@{CRITICAL}!Logger.hpp@{Logger.hpp}}\index{Logger.hpp@{Logger.hpp}!CRITICAL@{CRITICAL}}}\Hypertarget{Logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9acda21a4a072f2261f6d4ab596599f8b0}\label{Logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9acda21a4a072f2261f6d4ab596599f8b0} 
+CRITICAL&Critical error messages. \\
+\hline
+
+\end{DoxyEnumFields}

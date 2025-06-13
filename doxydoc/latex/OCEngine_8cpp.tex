@@ -1,0 +1,95 @@
+\doxysection{src/\+OCEngine.cpp File Reference}
+\hypertarget{OCEngine_8cpp}{}\label{OCEngine_8cpp}\index{src/OCEngine.cpp@{src/OCEngine.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include "{}Logger.\+hpp"{}}\newline
+{\ttfamily \#include "{}OCEngine.\+hpp"{}}\newline
+{\ttfamily \#include $<$regex$>$}\newline
+{\ttfamily \#include "{}Tcp\+Server.\+hpp"{}}\newline
+{\ttfamily \#include "{}Tcp\+Utilities.\+hpp"{}}\newline
+Include dependency graph for OCEngine.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{OCEngine_8cpp_a25c71fca33f277c56d970a46aad2194a}{on\+Connect}} (SOCKET\+\_\+\+DISCRIPTOR\+\_\+ fd)
+\item 
+void \mbox{\hyperlink{OCEngine_8cpp_a11d663bba49be482033ebfceb7e581c5}{on\+Input}} (SOCKET\+\_\+\+DISCRIPTOR\+\_\+ fd, const char \texorpdfstring{$\ast$}{*}buffer)
+\item 
+void \mbox{\hyperlink{OCEngine_8cpp_aa792d7292cbeec2ea169a20e1b9faa0e}{on\+Disconnect}} (SOCKET\+\_\+\+DISCRIPTOR\+\_\+ fd)
+\item 
+int \mbox{\hyperlink{OCEngine_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTcpServer}{Tcp\+Server}} \mbox{\hyperlink{OCEngine_8cpp_abc01a43d495ca4ebe04e3ab413ecba70}{server}}
+\item 
+string \mbox{\hyperlink{OCEngine_8cpp_a42004ddd8c7bd9d35babdc02116013dc}{in\+Sock\+Str}}
+\item 
+\mbox{\hyperlink{classLogger}{Logger}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{OCEngine_8cpp_a0009c186c3629201f6c24eded36605f4}{logger}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{OCEngine_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{OCEngine_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+\index{OCEngine.cpp@{OCEngine.cpp}!main@{main}}
+\index{main@{main}!OCEngine.cpp@{OCEngine.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 1
+\Hypertarget{OCEngine_8cpp_a25c71fca33f277c56d970a46aad2194a}\label{OCEngine_8cpp_a25c71fca33f277c56d970a46aad2194a} 
+\index{OCEngine.cpp@{OCEngine.cpp}!onConnect@{onConnect}}
+\index{onConnect@{onConnect}!OCEngine.cpp@{OCEngine.cpp}}
+\doxysubsubsection{\texorpdfstring{onConnect()}{onConnect()}}
+{\footnotesize\ttfamily void on\+Connect (\begin{DoxyParamCaption}\item[{SOCKET\+\_\+\+DISCRIPTOR\+\_\+}]{fd }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{OCEngine_8cpp_aa792d7292cbeec2ea169a20e1b9faa0e}\label{OCEngine_8cpp_aa792d7292cbeec2ea169a20e1b9faa0e} 
+\index{OCEngine.cpp@{OCEngine.cpp}!onDisconnect@{onDisconnect}}
+\index{onDisconnect@{onDisconnect}!OCEngine.cpp@{OCEngine.cpp}}
+\doxysubsubsection{\texorpdfstring{onDisconnect()}{onDisconnect()}}
+{\footnotesize\ttfamily void on\+Disconnect (\begin{DoxyParamCaption}\item[{SOCKET\+\_\+\+DISCRIPTOR\+\_\+}]{fd }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\Hypertarget{OCEngine_8cpp_a11d663bba49be482033ebfceb7e581c5}\label{OCEngine_8cpp_a11d663bba49be482033ebfceb7e581c5} 
+\index{OCEngine.cpp@{OCEngine.cpp}!onInput@{onInput}}
+\index{onInput@{onInput}!OCEngine.cpp@{OCEngine.cpp}}
+\doxysubsubsection{\texorpdfstring{onInput()}{onInput()}}
+{\footnotesize\ttfamily void on\+Input (\begin{DoxyParamCaption}\item[{SOCKET\+\_\+\+DISCRIPTOR\+\_\+}]{fd,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{buffer }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{OCEngine_8cpp_a42004ddd8c7bd9d35babdc02116013dc}\label{OCEngine_8cpp_a42004ddd8c7bd9d35babdc02116013dc} 
+\index{OCEngine.cpp@{OCEngine.cpp}!inSockStr@{inSockStr}}
+\index{inSockStr@{inSockStr}!OCEngine.cpp@{OCEngine.cpp}}
+\doxysubsubsection{\texorpdfstring{inSockStr}{inSockStr}}
+{\footnotesize\ttfamily string in\+Sock\+Str}
+
+\Hypertarget{OCEngine_8cpp_a0009c186c3629201f6c24eded36605f4}\label{OCEngine_8cpp_a0009c186c3629201f6c24eded36605f4} 
+\index{OCEngine.cpp@{OCEngine.cpp}!logger@{logger}}
+\index{logger@{logger}!OCEngine.cpp@{OCEngine.cpp}}
+\doxysubsubsection{\texorpdfstring{logger}{logger}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLogger}{Logger}}\texorpdfstring{$\ast$}{*} logger}
+
+\Hypertarget{OCEngine_8cpp_abc01a43d495ca4ebe04e3ab413ecba70}\label{OCEngine_8cpp_abc01a43d495ca4ebe04e3ab413ecba70} 
+\index{OCEngine.cpp@{OCEngine.cpp}!server@{server}}
+\index{server@{server}!OCEngine.cpp@{OCEngine.cpp}}
+\doxysubsubsection{\texorpdfstring{server}{server}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTcpServer}{Tcp\+Server}} server}
+

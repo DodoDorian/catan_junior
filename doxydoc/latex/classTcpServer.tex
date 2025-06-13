@@ -1,0 +1,251 @@
+\doxysection{Tcp\+Server Class Reference}
+\hypertarget{classTcpServer}{}\label{classTcpServer}\index{TcpServer@{TcpServer}}
+
+
+A class to handle TCP server operations such as accepting connections and receiving data.  
+
+
+
+
+{\ttfamily \#include $<$Tcp\+Server.\+hpp$>$}
+
+
+
+Collaboration diagram for Tcp\+Server\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTcpServer_abc977059ef61f1c42f5fda1bc5945ab0}{Tcp\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{classTcpServer}{Tcp\+Server}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTcpServer_a838d98bda00a0146f4a0d93a8fdddc44}{Tcp\+Server}} (int port)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classTcpServer}{Tcp\+Server} with a specified port. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTcpServer_a728a9e31c53cf86887f1f6149b1c46dd}{\texorpdfstring{$\sim$}{\string~}\+Tcp\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{classTcpServer}{Tcp\+Server}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTcpServer_a918898ee7b13d776a2f7ea8968168669}{shutdown}} ()
+\begin{DoxyCompactList}\small\item\em Shuts down the server and closes connections. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTcpServer_a64291f0ad4b590f32414ca93fffd13f0}{init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the server by setting up sockets and binding. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTcpServer_a25718832405741fcd56d4b140aa0898c}{loop}} ()
+\begin{DoxyCompactList}\small\item\em Main loop for the server to handle incoming connections and data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTcpServer_a0e05dff9eb3fe17944fe00f054bf8e5c}{on\+Connected}} (void(\texorpdfstring{$\ast$}{*}ncc)(SOCKET\+\_\+\+DISCRIPTOR\+\_\+ fd))
+\begin{DoxyCompactList}\small\item\em Sets the callback function to be called when a new connection is established. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTcpServer_a66dbf6170e6d8c00043728ac03d2d60c}{on\+Received\+Data}} (void(\texorpdfstring{$\ast$}{*}rc)(SOCKET\+\_\+\+DISCRIPTOR\+\_\+ fd, const char \texorpdfstring{$\ast$}{*}buffer))
+\begin{DoxyCompactList}\small\item\em Sets the callback function to be called when data is received. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTcpServer_a6f13671b9cdb554ef6ac39ff55d01403}{on\+Disconnected}} (void(\texorpdfstring{$\ast$}{*}dc)(SOCKET\+\_\+\+DISCRIPTOR\+\_\+ fd))
+\begin{DoxyCompactList}\small\item\em Sets the callback function to be called when a connection is disconnected. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTcpServer_a267fa76ef650fbb743f60a7059d0b674}{send\+Message}} (SOCKET\+\_\+\+DISCRIPTOR\+\_\+ fd, const char \texorpdfstring{$\ast$}{*}message\+Buffer) const
+\begin{DoxyCompactList}\small\item\em Sends a message to a specified socket descriptor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTcpServer_ab53b744862d2c007c08b088180ae02d9}{send\+Message}} (SOCKET\+\_\+\+DISCRIPTOR\+\_\+ fd, char \texorpdfstring{$\ast$}{*}message\+Buffer) const
+\begin{DoxyCompactList}\small\item\em Overloaded function to send a message using a char pointer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTcpServer_a3aa315c1176e3ae52fe6ef7a6de8bb50}{close\+Connection}} (SOCKET\+\_\+\+DISCRIPTOR\+\_\+ fd)
+\begin{DoxyCompactList}\small\item\em Closes the connection for a specified socket descriptor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to handle TCP server operations such as accepting connections and receiving data. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classTcpServer_abc977059ef61f1c42f5fda1bc5945ab0}\label{classTcpServer_abc977059ef61f1c42f5fda1bc5945ab0} 
+\index{TcpServer@{TcpServer}!TcpServer@{TcpServer}}
+\index{TcpServer@{TcpServer}!TcpServer@{TcpServer}}
+\doxysubsubsection{\texorpdfstring{TcpServer()}{TcpServer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Tcp\+Server\+::\+Tcp\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{classTcpServer}{Tcp\+Server}. 
+
+Constructor for \doxylink{classTcpServer}{Tcp\+Server}. Initializes the logger and sets up the server with a default port. Here is the call graph for this function\+:
+% FIG 1
+\Hypertarget{classTcpServer_a838d98bda00a0146f4a0d93a8fdddc44}\label{classTcpServer_a838d98bda00a0146f4a0d93a8fdddc44} 
+\index{TcpServer@{TcpServer}!TcpServer@{TcpServer}}
+\index{TcpServer@{TcpServer}!TcpServer@{TcpServer}}
+\doxysubsubsection{\texorpdfstring{TcpServer()}{TcpServer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Tcp\+Server\+::\+Tcp\+Server (\begin{DoxyParamCaption}\item[{int}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor for \doxylink{classTcpServer}{Tcp\+Server} with a specified port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port number to use for the server. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 2
+\Hypertarget{classTcpServer_a728a9e31c53cf86887f1f6149b1c46dd}\label{classTcpServer_a728a9e31c53cf86887f1f6149b1c46dd} 
+\index{TcpServer@{TcpServer}!````~TcpServer@{\texorpdfstring{$\sim$}{\string~}TcpServer}}
+\index{````~TcpServer@{\texorpdfstring{$\sim$}{\string~}TcpServer}!TcpServer@{TcpServer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}TcpServer()}{\string~TcpServer()}}
+{\footnotesize\ttfamily Tcp\+Server\+::\texorpdfstring{$\sim$}{\string~}\+Tcp\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor for \doxylink{classTcpServer}{Tcp\+Server}. 
+
+Destructor for \doxylink{classTcpServer}{Tcp\+Server}. Closes the server and cleans up resources. Here is the call graph for this function\+:
+% FIG 3
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classTcpServer_a3aa315c1176e3ae52fe6ef7a6de8bb50}\label{classTcpServer_a3aa315c1176e3ae52fe6ef7a6de8bb50} 
+\index{TcpServer@{TcpServer}!closeConnection@{closeConnection}}
+\index{closeConnection@{closeConnection}!TcpServer@{TcpServer}}
+\doxysubsubsection{\texorpdfstring{closeConnection()}{closeConnection()}}
+{\footnotesize\ttfamily int Tcp\+Server\+::close\+Connection (\begin{DoxyParamCaption}\item[{SOCKET\+\_\+\+DISCRIPTOR\+\_\+}]{fd }\end{DoxyParamCaption})}
+
+
+
+Closes the connection for a specified socket descriptor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & The socket descriptor to close. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the close operation. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 4
+\Hypertarget{classTcpServer_a64291f0ad4b590f32414ca93fffd13f0}\label{classTcpServer_a64291f0ad4b590f32414ca93fffd13f0} 
+\index{TcpServer@{TcpServer}!init@{init}}
+\index{init@{init}!TcpServer@{TcpServer}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Tcp\+Server\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the server by setting up sockets and binding. 
+
+Initializes the \doxylink{classTcpServer}{Tcp\+Server} by setting up the socket, binding, and starting to listen. Here is the caller graph for this function\+:
+% FIG 5
+\Hypertarget{classTcpServer_a25718832405741fcd56d4b140aa0898c}\label{classTcpServer_a25718832405741fcd56d4b140aa0898c} 
+\index{TcpServer@{TcpServer}!loop@{loop}}
+\index{loop@{loop}!TcpServer@{TcpServer}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void Tcp\+Server\+::loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main loop for the server to handle incoming connections and data. 
+
+Main loop for the \doxylink{classTcpServer}{Tcp\+Server}, handling incoming connections and data. Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
+\Hypertarget{classTcpServer_a0e05dff9eb3fe17944fe00f054bf8e5c}\label{classTcpServer_a0e05dff9eb3fe17944fe00f054bf8e5c} 
+\index{TcpServer@{TcpServer}!onConnected@{onConnected}}
+\index{onConnected@{onConnected}!TcpServer@{TcpServer}}
+\doxysubsubsection{\texorpdfstring{onConnected()}{onConnected()}}
+{\footnotesize\ttfamily void Tcp\+Server\+::on\+Connected (\begin{DoxyParamCaption}\item[{void(\texorpdfstring{$\ast$}{*})(SOCKET\+\_\+\+DISCRIPTOR\+\_\+ fd)}]{ncc }\end{DoxyParamCaption})}
+
+
+
+Sets the callback function to be called when a new connection is established. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ncc} & Pointer to the callback function. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 8
+\Hypertarget{classTcpServer_a6f13671b9cdb554ef6ac39ff55d01403}\label{classTcpServer_a6f13671b9cdb554ef6ac39ff55d01403} 
+\index{TcpServer@{TcpServer}!onDisconnected@{onDisconnected}}
+\index{onDisconnected@{onDisconnected}!TcpServer@{TcpServer}}
+\doxysubsubsection{\texorpdfstring{onDisconnected()}{onDisconnected()}}
+{\footnotesize\ttfamily void Tcp\+Server\+::on\+Disconnected (\begin{DoxyParamCaption}\item[{void(\texorpdfstring{$\ast$}{*})(SOCKET\+\_\+\+DISCRIPTOR\+\_\+ fd)}]{dc }\end{DoxyParamCaption})}
+
+
+
+Sets the callback function to be called when a connection is disconnected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dc} & Pointer to the callback function. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 9
+\Hypertarget{classTcpServer_a66dbf6170e6d8c00043728ac03d2d60c}\label{classTcpServer_a66dbf6170e6d8c00043728ac03d2d60c} 
+\index{TcpServer@{TcpServer}!onReceivedData@{onReceivedData}}
+\index{onReceivedData@{onReceivedData}!TcpServer@{TcpServer}}
+\doxysubsubsection{\texorpdfstring{onReceivedData()}{onReceivedData()}}
+{\footnotesize\ttfamily void Tcp\+Server\+::on\+Received\+Data (\begin{DoxyParamCaption}\item[{void(\texorpdfstring{$\ast$}{*})(SOCKET\+\_\+\+DISCRIPTOR\+\_\+ fd, const char \texorpdfstring{$\ast$}{*}buffer)}]{rc }\end{DoxyParamCaption})}
+
+
+
+Sets the callback function to be called when data is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rc} & Pointer to the callback function. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 10
+\Hypertarget{classTcpServer_ab53b744862d2c007c08b088180ae02d9}\label{classTcpServer_ab53b744862d2c007c08b088180ae02d9} 
+\index{TcpServer@{TcpServer}!sendMessage@{sendMessage}}
+\index{sendMessage@{sendMessage}!TcpServer@{TcpServer}}
+\doxysubsubsection{\texorpdfstring{sendMessage()}{sendMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Tcp\+Server\+::send\+Message (\begin{DoxyParamCaption}\item[{SOCKET\+\_\+\+DISCRIPTOR\+\_\+}]{fd,  }\item[{char \texorpdfstring{$\ast$}{*}}]{message\+Buffer }\end{DoxyParamCaption}) const}
+
+
+
+Overloaded function to send a message using a char pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & The socket descriptor to send the message to. \\
+\hline
+{\em message\+Buffer} & The message to send. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes sent. 
+\end{DoxyReturn}
+\Hypertarget{classTcpServer_a267fa76ef650fbb743f60a7059d0b674}\label{classTcpServer_a267fa76ef650fbb743f60a7059d0b674} 
+\index{TcpServer@{TcpServer}!sendMessage@{sendMessage}}
+\index{sendMessage@{sendMessage}!TcpServer@{TcpServer}}
+\doxysubsubsection{\texorpdfstring{sendMessage()}{sendMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Tcp\+Server\+::send\+Message (\begin{DoxyParamCaption}\item[{SOCKET\+\_\+\+DISCRIPTOR\+\_\+}]{fd,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{message\+Buffer }\end{DoxyParamCaption}) const}
+
+
+
+Sends a message to a specified socket descriptor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & The socket descriptor to send the message to. \\
+\hline
+{\em message\+Buffer} & The message to send. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes sent. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 11
+\Hypertarget{classTcpServer_a918898ee7b13d776a2f7ea8968168669}\label{classTcpServer_a918898ee7b13d776a2f7ea8968168669} 
+\index{TcpServer@{TcpServer}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!TcpServer@{TcpServer}}
+\doxysubsubsection{\texorpdfstring{shutdown()}{shutdown()}}
+{\footnotesize\ttfamily void Tcp\+Server\+::shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Shuts down the server and closes connections. 
+
+Shuts down the \doxylink{classTcpServer}{Tcp\+Server} by closing the connection. Here is the call graph for this function\+:
+% FIG 12
+Here is the caller graph for this function\+:
+% FIG 13
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{TcpServer_8hpp}{Tcp\+Server.\+hpp}}\item 
+src/\mbox{\hyperlink{TcpServer_8cpp}{Tcp\+Server.\+cpp}}\end{DoxyCompactItemize}

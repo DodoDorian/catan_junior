@@ -1,0 +1,74 @@
+\doxysection{include/\+Tcp\+Utilities.hpp File Reference}
+\hypertarget{TcpUtilities_8hpp}{}\label{TcpUtilities_8hpp}\index{include/TcpUtilities.hpp@{include/TcpUtilities.hpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+Include dependency graph for Tcp\+Utilities.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{TcpUtilities_8hpp_ad20bcd822173fcc9bbb1cd469530c647}{print\+Hexl\+String\+Stream}} (const string \&buffer)
+\begin{DoxyCompactList}\small\item\em Prints the hexadecimal representation of a given string buffer. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{TcpUtilities_8hpp_aaaf10de34656611238d20b626ff75b2a}{get\+IPby\+FD}} (const int fd)
+\begin{DoxyCompactList}\small\item\em Retrieves the IP address of a client connected to a socket. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{TcpUtilities_8hpp_aaaf10de34656611238d20b626ff75b2a}\label{TcpUtilities_8hpp_aaaf10de34656611238d20b626ff75b2a} 
+\index{TcpUtilities.hpp@{TcpUtilities.hpp}!getIPbyFD@{getIPbyFD}}
+\index{getIPbyFD@{getIPbyFD}!TcpUtilities.hpp@{TcpUtilities.hpp}}
+\doxysubsubsection{\texorpdfstring{getIPbyFD()}{getIPbyFD()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} get\+IPby\+FD (\begin{DoxyParamCaption}\item[{const int}]{fd }\end{DoxyParamCaption})}
+
+
+
+Retrieves the IP address of a client connected to a socket. 
+
+This function uses the socket file descriptor to get the client\textquotesingle{}s address and converts it to a string format.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & The socket file descriptor of the client. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to a string containing the IP address, or nullptr on failure. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{TcpUtilities_8hpp_ad20bcd822173fcc9bbb1cd469530c647}\label{TcpUtilities_8hpp_ad20bcd822173fcc9bbb1cd469530c647} 
+\index{TcpUtilities.hpp@{TcpUtilities.hpp}!printHexlStringStream@{printHexlStringStream}}
+\index{printHexlStringStream@{printHexlStringStream}!TcpUtilities.hpp@{TcpUtilities.hpp}}
+\doxysubsubsection{\texorpdfstring{printHexlStringStream()}{printHexlStringStream()}}
+{\footnotesize\ttfamily void print\+Hexl\+String\+Stream (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Prints the hexadecimal representation of a given string buffer. 
+
+This function formats the buffer into a hexadecimal string and prints it to the standard output.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The string buffer to be printed in hex format.\\
+\hline
+\end{DoxyParams}
+This function formats the buffer into a hexadecimal string and prints it to the logger. It also prints the ASCII representation of the data alongside the hex values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The string buffer to be printed in hex format. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4

@@ -1,0 +1,26 @@
+\doxysection{Tcp\+Utilities.\+hpp}
+\hypertarget{TcpUtilities_8hpp_source}{}\label{TcpUtilities_8hpp_source}\index{include/TcpUtilities.hpp@{include/TcpUtilities.hpp}}
+\mbox{\hyperlink{TcpUtilities_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TCP\_UTILITIES\_HPP\ \ }\textcolor{comment}{//\ Include\ guard\ to\ prevent\ multiple\ inclusions\ of\ this\ header\ file}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TCP\_UTILITIES\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}\ \textcolor{comment}{//\ Include\ for\ input/output\ stream\ operations}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}\ \ \ \textcolor{comment}{//\ Include\ for\ using\ std::string}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iomanip>}\ \ \textcolor{comment}{//\ Include\ for\ input/output\ manipulators}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <sys/socket.h>}\ \textcolor{comment}{//\ Include\ for\ socket-\/related\ functions\ and\ definitions}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <netinet/in.h>}\ \textcolor{comment}{//\ Include\ for\ internet\ address\ family}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <cstring>}\ \ \ \ \ \ \textcolor{comment}{//\ Include\ for\ string\ manipulation\ functions}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <arpa/inet.h>}\ \ \textcolor{comment}{//\ Include\ for\ inet\_ntop\ and\ inet\_pton\ functions}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <unistd.h>}\ \ \ \ \ \textcolor{comment}{//\ Include\ for\ POSIX\ operating\ system\ API}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{TcpUtilities_8hpp_ad20bcd822173fcc9bbb1cd469530c647}{printHexlStringStream}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&buffer);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{TcpUtilities_8hpp_aaaf10de34656611238d20b626ff75b2a}{getIPbyFD}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ fd);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ End\ of\ include\ guard}}
+
+\end{DoxyCode}

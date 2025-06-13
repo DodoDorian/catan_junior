@@ -1,0 +1,72 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Class Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Class List}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}File Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}File List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Class Documentation}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Logger Class Reference}{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Detailed Description}{6}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Constructor \& Destructor Documentation}{6}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}Logger()}{6}{subsubsection.3.1.2.1}%
+\contentsline {subsection}{\numberline {3.1.3}Member Function Documentation}{6}{subsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.3.1}getInstance()}{6}{subsubsection.3.1.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.3.2}log()}{6}{subsubsection.3.1.3.2}%
+\contentsline {subsubsection}{\numberline {3.1.3.3}operator$<$$<$()\hspace {0.1cm}{\footnotesize \ttfamily [1/6]}}{7}{subsubsection.3.1.3.3}%
+\contentsline {subsubsection}{\numberline {3.1.3.4}operator$<$$<$()\hspace {0.1cm}{\footnotesize \ttfamily [2/6]}}{7}{subsubsection.3.1.3.4}%
+\contentsline {subsubsection}{\numberline {3.1.3.5}operator$<$$<$()\hspace {0.1cm}{\footnotesize \ttfamily [3/6]}}{7}{subsubsection.3.1.3.5}%
+\contentsline {subsubsection}{\numberline {3.1.3.6}operator$<$$<$()\hspace {0.1cm}{\footnotesize \ttfamily [4/6]}}{8}{subsubsection.3.1.3.6}%
+\contentsline {subsubsection}{\numberline {3.1.3.7}operator$<$$<$()\hspace {0.1cm}{\footnotesize \ttfamily [5/6]}}{8}{subsubsection.3.1.3.7}%
+\contentsline {subsubsection}{\numberline {3.1.3.8}operator$<$$<$()\hspace {0.1cm}{\footnotesize \ttfamily [6/6]}}{8}{subsubsection.3.1.3.8}%
+\contentsline {subsubsection}{\numberline {3.1.3.9}operator=()}{9}{subsubsection.3.1.3.9}%
+\contentsline {section}{\numberline {3.2}Tcp\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Server Class Reference}{9}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Detailed Description}{9}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Constructor \& Destructor Documentation}{10}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}TcpServer()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{10}{subsubsection.3.2.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2.2}TcpServer()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{10}{subsubsection.3.2.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.3}$\sim $TcpServer()}{10}{subsubsection.3.2.2.3}%
+\contentsline {subsection}{\numberline {3.2.3}Member Function Documentation}{10}{subsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.3.1}closeConnection()}{10}{subsubsection.3.2.3.1}%
+\contentsline {subsubsection}{\numberline {3.2.3.2}init()}{11}{subsubsection.3.2.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.3.3}loop()}{11}{subsubsection.3.2.3.3}%
+\contentsline {subsubsection}{\numberline {3.2.3.4}onConnected()}{11}{subsubsection.3.2.3.4}%
+\contentsline {subsubsection}{\numberline {3.2.3.5}onDisconnected()}{11}{subsubsection.3.2.3.5}%
+\contentsline {subsubsection}{\numberline {3.2.3.6}onReceivedData()}{12}{subsubsection.3.2.3.6}%
+\contentsline {subsubsection}{\numberline {3.2.3.7}sendMessage()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{12}{subsubsection.3.2.3.7}%
+\contentsline {subsubsection}{\numberline {3.2.3.8}sendMessage()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{12}{subsubsection.3.2.3.8}%
+\contentsline {subsubsection}{\numberline {3.2.3.9}shutdown()}{13}{subsubsection.3.2.3.9}%
+\contentsline {chapter}{\numberline {4}File Documentation}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Logger.hpp File Reference}{15}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Logger.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{15}{section.4.2}%
+\contentsline {section}{\numberline {4.3}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}OCEngine.hpp File Reference}{17}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Macro Definition Documentation}{17}{subsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.1}OC\_ENGINE\_STD\_PORT}{17}{subsubsection.4.3.1.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.2}OC\_ENGINE\_VERSION}{17}{subsubsection.4.3.1.2}%
+\contentsline {subsubsection}{\numberline {4.3.1.3}OC\_LOG\_FILE}{17}{subsubsection.4.3.1.3}%
+\contentsline {section}{\numberline {4.4}OCEngine.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{17}{section.4.4}%
+\contentsline {section}{\numberline {4.5}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tcp\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Server.hpp File Reference}{18}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Macro Definition Documentation}{18}{subsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.1.1}DEFAULT\_PORT}{18}{subsubsection.4.5.1.1}%
+\contentsline {subsubsection}{\numberline {4.5.1.2}INPUT\_BUFFER\_SIZE}{18}{subsubsection.4.5.1.2}%
+\contentsline {subsubsection}{\numberline {4.5.1.3}SERVER\_DEBUG}{18}{subsubsection.4.5.1.3}%
+\contentsline {section}{\numberline {4.6}Tcp\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Server.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{18}{section.4.6}%
+\contentsline {section}{\numberline {4.7}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tcp\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Utilities.hpp File Reference}{19}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Function Documentation}{20}{subsection.4.7.1}%
+\contentsline {subsubsection}{\numberline {4.7.1.1}getIPbyFD()}{20}{subsubsection.4.7.1.1}%
+\contentsline {subsubsection}{\numberline {4.7.1.2}printHexlStringStream()}{20}{subsubsection.4.7.1.2}%
+\contentsline {section}{\numberline {4.8}Tcp\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Utilities.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{21}{section.4.8}%
+\contentsline {section}{\numberline {4.9}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}OCEngine.cpp File Reference}{21}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Function Documentation}{22}{subsection.4.9.1}%
+\contentsline {subsubsection}{\numberline {4.9.1.1}main()}{22}{subsubsection.4.9.1.1}%
+\contentsline {subsubsection}{\numberline {4.9.1.2}onConnect()}{22}{subsubsection.4.9.1.2}%
+\contentsline {subsubsection}{\numberline {4.9.1.3}onDisconnect()}{22}{subsubsection.4.9.1.3}%
+\contentsline {subsubsection}{\numberline {4.9.1.4}onInput()}{22}{subsubsection.4.9.1.4}%
+\contentsline {subsection}{\numberline {4.9.2}Variable Documentation}{22}{subsection.4.9.2}%
+\contentsline {subsubsection}{\numberline {4.9.2.1}inSockStr}{22}{subsubsection.4.9.2.1}%
+\contentsline {subsubsection}{\numberline {4.9.2.2}logger}{22}{subsubsection.4.9.2.2}%
+\contentsline {subsubsection}{\numberline {4.9.2.3}server}{22}{subsubsection.4.9.2.3}%
+\contentsline {section}{\numberline {4.10}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tcp\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Server.cpp File Reference}{23}{section.4.10}%
+\contentsline {section}{\numberline {4.11}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tcp\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Utilities.cpp File Reference}{23}{section.4.11}%
+\contentsline {subsection}{\numberline {4.11.1}Function Documentation}{23}{subsection.4.11.1}%
+\contentsline {subsubsection}{\numberline {4.11.1.1}getIPbyFD()}{23}{subsubsection.4.11.1.1}%
+\contentsline {subsubsection}{\numberline {4.11.1.2}printHexlStringStream()}{23}{subsubsection.4.11.1.2}%
+\contentsline {chapter}{Index}{25}{section*.11}%

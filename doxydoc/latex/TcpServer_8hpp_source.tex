@@ -1,0 +1,99 @@
+\doxysection{Tcp\+Server.\+hpp}
+\hypertarget{TcpServer_8hpp_source}{}\label{TcpServer_8hpp_source}\index{include/TcpServer.hpp@{include/TcpServer.hpp}}
+\mbox{\hyperlink{TcpServer_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TCP\_SERVER\_\ \ }\textcolor{comment}{//\ Include\ guard\ to\ prevent\ multiple\ inclusions\ of\ this\ header\ file}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TCP\_SERVER\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{TcpUtilities_8hpp}{TcpUtilities.hpp}}"{}}\ \textcolor{comment}{//\ Include\ custom\ TCP\ utility\ functions}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Logger_8hpp}{Logger.hpp}}"{}}\ \textcolor{comment}{//\ Include\ logger\ for\ logging\ messages}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ Platform-\/specific\ includes\ and\ definitions}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#if\ defined\ (\_\_linux\_\_)\ ||\ defined\ (\_\_APPLE\_\_)}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\ \ \ \ \#include\ <unistd.h>}\ \textcolor{comment}{//\ For\ POSIX\ operating\ system\ API}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\ \ \ \ \#include\ <sys/select.h>}\ \textcolor{comment}{//\ For\ select\ function}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\ \ \ \ \#include\ <sys/types.h>}\ \textcolor{comment}{//\ For\ data\ types\ used\ in\ system\ calls}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\ \ \ \ \#include\ <netinet/in.h>}\ \textcolor{comment}{//\ For\ internet\ address\ family}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\ \ \ \ \#include\ <arpa/inet.h>}\ \textcolor{comment}{//\ For\ inet\_ntop\ and\ inet\_pton\ functions}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\ \ \ \ \#include\ <sys/socket.h>}\ \textcolor{comment}{//\ For\ socket\ functions}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\ \ \ \ \#define\ SOCKET\_DISCRIPTOR\_\ int\ }\textcolor{comment}{//\ Define\ SOCKET\_DISCRIPTOR\_\ as\ int\ for\ socket\ descriptors}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#elif\ \_WIN32}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\ \ \ \ \#include\ <cstdint>}\ \textcolor{comment}{//\ For\ fixed-\/width\ integer\ types}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\ \ \ \ \#include\ <WinSock2.h>}\ \textcolor{comment}{//\ For\ Windows\ Sockets\ API}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\ \ \ \ \#include\ <WS2tcpip.h>}\ \textcolor{comment}{//\ For\ Windows\ TCP/IP\ functions}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\ \ \ \ \#define\ SOCKET\_DISCRIPTOR\_\ SOCKET\ }\textcolor{comment}{//\ Define\ SOCKET\_DISCRIPTOR\_\ as\ SOCKET\ for\ Windows}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ INPUT\_BUFFER\_SIZE\ 1024\ }\textcolor{comment}{//\ Size\ of\ the\ input\ buffer}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ DEFAULT\_PORT\ 38233\ }\textcolor{comment}{//\ Default\ port\ for\ the\ server}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ SERVER\_DEBUG\ true\ }\textcolor{comment}{//\ Enable\ server\ debugging}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTcpServer}{TcpServer}}\ \{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{classTcpServer_abc977059ef61f1c42f5fda1bc5945ab0}{TcpServer}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classTcpServer_abc977059ef61f1c42f5fda1bc5945ab0}{TcpServer}}(\textcolor{keywordtype}{int}\ port);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classTcpServer_a728a9e31c53cf86887f1f6149b1c46dd}{\string~TcpServer}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#ifdef\ \_WIN32}}
+\DoxyCodeLine{00053\ \ \ \ \ WSADATA\ wsaData;\ \textcolor{comment}{//\ Structure\ to\ hold\ Windows\ Sockets\ data}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTcpServer_a918898ee7b13d776a2f7ea8968168669}{shutdown}}();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTcpServer_a64291f0ad4b590f32414ca93fffd13f0}{init}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTcpServer_a25718832405741fcd56d4b140aa0898c}{loop}}();}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTcpServer_a0e05dff9eb3fe17944fe00f054bf8e5c}{onConnected}}(\textcolor{keywordtype}{void}\ (*ncc)(SOCKET\_DISCRIPTOR\_\ fd));}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTcpServer_a66dbf6170e6d8c00043728ac03d2d60c}{onReceivedData}}(\textcolor{keywordtype}{void}\ (*rc)(SOCKET\_DISCRIPTOR\_\ fd,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ buffer));}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTcpServer_a6f13671b9cdb554ef6ac39ff55d01403}{onDisconnected}}(\textcolor{keywordtype}{void}\ (*dc)(SOCKET\_DISCRIPTOR\_\ fd));}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classTcpServer_a267fa76ef650fbb743f60a7059d0b674}{sendMessage}}(SOCKET\_DISCRIPTOR\_\ fd,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ messageBuffer)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classTcpServer_a267fa76ef650fbb743f60a7059d0b674}{sendMessage}}(SOCKET\_DISCRIPTOR\_\ fd,\ \textcolor{keywordtype}{char}*\ messageBuffer)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classTcpServer_a3aa315c1176e3ae52fe6ef7a6de8bb50}{closeConnection}}(SOCKET\_DISCRIPTOR\_\ fd);}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00119\ \ \ \ \ \mbox{\hyperlink{classLogger}{Logger}}\ *logger;\ \textcolor{comment}{//\ Pointer\ to\ the\ logger\ instance}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ fd\_set\ masterfds\{\};\ \textcolor{comment}{//\ Master\ file\ descriptor\ set}}
+\DoxyCodeLine{00122\ \ \ \ \ fd\_set\ tempfds\{\};\ \textcolor{comment}{//\ Temporary\ file\ descriptor\ set}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ SOCKET\_DISCRIPTOR\_\ maxfd\{\};\ \textcolor{comment}{//\ Maximum\ file\ descriptor}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ SOCKET\_DISCRIPTOR\_\ mastersocket\_fd\{\};\ \textcolor{comment}{//\ Master\ socket\ file\ descriptor}}
+\DoxyCodeLine{00127\ \ \ \ \ SOCKET\_DISCRIPTOR\_\ tempsocket\_fd\{\};\ \textcolor{comment}{//\ Temporary\ socket\ file\ descriptor}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keyword}{struct\ }sockaddr\_storage\ client\_addr\{\};\ \textcolor{comment}{//\ Structure\ to\ hold\ client\ address}}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keyword}{struct\ }sockaddr\_storage\ servaddr\{\};\ \textcolor{comment}{//\ Structure\ to\ hold\ server\ address}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{char}\ input\_buffer[\mbox{\hyperlink{TcpServer_8hpp_aa9b8dcc02cea15aab8e3d0b7860327a7}{INPUT\_BUFFER\_SIZE}}]\{\};\ \textcolor{comment}{//\ Buffer\ for\ incoming\ data}}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{char}\ remote\_ip[INET6\_ADDRSTRLEN]\{\};\ \textcolor{comment}{//\ Buffer\ for\ remote\ IP\ address}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ void\ (*connectedCallback)\ (SOCKET\_DISCRIPTOR\_\ fd)\{\};\ \textcolor{comment}{//\ Callback\ for\ new\ connections}}
+\DoxyCodeLine{00136\ \ \ \ \ void\ (*receivedCallback)\ (SOCKET\_DISCRIPTOR\_\ fd,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ buffer)\{\};\ \textcolor{comment}{//\ Callback\ for\ received\ data}}
+\DoxyCodeLine{00137\ \ \ \ \ void\ (*disconnectedCallback)\ (SOCKET\_DISCRIPTOR\_\ fd)\{\};\ \textcolor{comment}{//\ Callback\ for\ disconnections}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ setup(\textcolor{keywordtype}{int}\ port);}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ initializeSocket();}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ bindSocket();}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{void}\ startListen()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{void}\ handleNewConnection();}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{void}\ recvInputFromExisting(SOCKET\_DISCRIPTOR\_\ fd);}
+\DoxyCodeLine{00172\ \};}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ End\ of\ include\ guard}}
+
+\end{DoxyCode}

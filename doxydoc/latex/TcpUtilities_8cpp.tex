@@ -1,0 +1,59 @@
+\doxysection{src/\+Tcp\+Utilities.cpp File Reference}
+\hypertarget{TcpUtilities_8cpp}{}\label{TcpUtilities_8cpp}\index{src/TcpUtilities.cpp@{src/TcpUtilities.cpp}}
+{\ttfamily \#include "{}Tcp\+Utilities.\+hpp"{}}\newline
+{\ttfamily \#include "{}Logger.\+hpp"{}}\newline
+Include dependency graph for Tcp\+Utilities.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{TcpUtilities_8cpp_a0dfe0ca92ee808cd48b793d3e9964016}{print\+Hexl\+String\+Stream}} (const std\+::string \&buffer)
+\begin{DoxyCompactList}\small\item\em Prints the hexadecimal representation of a given string buffer. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{TcpUtilities_8cpp_aaaf10de34656611238d20b626ff75b2a}{get\+IPby\+FD}} (const int fd)
+\begin{DoxyCompactList}\small\item\em Retrieves the IP address of a client connected to a socket. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{TcpUtilities_8cpp_aaaf10de34656611238d20b626ff75b2a}\label{TcpUtilities_8cpp_aaaf10de34656611238d20b626ff75b2a} 
+\index{TcpUtilities.cpp@{TcpUtilities.cpp}!getIPbyFD@{getIPbyFD}}
+\index{getIPbyFD@{getIPbyFD}!TcpUtilities.cpp@{TcpUtilities.cpp}}
+\doxysubsubsection{\texorpdfstring{getIPbyFD()}{getIPbyFD()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} get\+IPby\+FD (\begin{DoxyParamCaption}\item[{const int}]{fd }\end{DoxyParamCaption})}
+
+
+
+Retrieves the IP address of a client connected to a socket. 
+
+This function uses the socket file descriptor to get the client\textquotesingle{}s address and converts it to a string format.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & The socket file descriptor of the client. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to a string containing the IP address, or nullptr on failure. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{TcpUtilities_8cpp_a0dfe0ca92ee808cd48b793d3e9964016}\label{TcpUtilities_8cpp_a0dfe0ca92ee808cd48b793d3e9964016} 
+\index{TcpUtilities.cpp@{TcpUtilities.cpp}!printHexlStringStream@{printHexlStringStream}}
+\index{printHexlStringStream@{printHexlStringStream}!TcpUtilities.cpp@{TcpUtilities.cpp}}
+\doxysubsubsection{\texorpdfstring{printHexlStringStream()}{printHexlStringStream()}}
+{\footnotesize\ttfamily void print\+Hexl\+String\+Stream (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Prints the hexadecimal representation of a given string buffer. 
+
+This function formats the buffer into a hexadecimal string and prints it to the logger. It also prints the ASCII representation of the data alongside the hex values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The string buffer to be printed in hex format. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3

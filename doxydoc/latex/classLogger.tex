@@ -1,0 +1,222 @@
+\doxysection{Logger Class Reference}
+\hypertarget{classLogger}{}\label{classLogger}\index{Logger@{Logger}}
+
+
+A singleton logger class for logging messages to a file.  
+
+
+
+
+{\ttfamily \#include $<$Logger.\+hpp$>$}
+
+
+
+Collaboration diagram for Logger\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLogger_add0f34d4c753c86af8074840a72366b3}{Logger}} (const \mbox{\hyperlink{classLogger}{Logger}} \&)=delete
+\item 
+\mbox{\hyperlink{classLogger}{Logger}} \& \mbox{\hyperlink{classLogger_a8c0ca770cdc91ca9fc3015286568e1ea}{operator=}} (const \mbox{\hyperlink{classLogger}{Logger}} \&)=delete
+\item 
+void \mbox{\hyperlink{classLogger_ad7719f8cff26d3d337153e65382d9d95}{log}} (const \mbox{\hyperlink{Logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9}{Log\+Level}} level, const string \&message)
+\begin{DoxyCompactList}\small\item\em Log a message with a specific log level. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLogger}{Logger}} \& \mbox{\hyperlink{classLogger_a7a4ccab079ff737cef378ab1d93843ca}{operator$<$$<$}} (const string \&message)
+\begin{DoxyCompactList}\small\item\em Overload the \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator to log string messages. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLogger}{Logger}} \& \mbox{\hyperlink{classLogger_ac369983ab6f3668eae7f389851a88b97}{operator$<$$<$}} (const \mbox{\hyperlink{Logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9}{Log\+Level}} level)
+\begin{DoxyCompactList}\small\item\em Overload the \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator to set the current log level. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLogger}{Logger}} \& \mbox{\hyperlink{classLogger_a013212d2d5fc33db285551c5daa88699}{operator$<$$<$}} (const int value)
+\begin{DoxyCompactList}\small\item\em Overload the \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator to log integer values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLogger}{Logger}} \& \mbox{\hyperlink{classLogger_af5ad544b52a74e4c49c756c43e732e1e}{operator$<$$<$}} (const char \texorpdfstring{$\ast$}{*}message)
+\begin{DoxyCompactList}\small\item\em Overload the \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator to log C-\/style string messages. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLogger}{Logger}} \& \mbox{\hyperlink{classLogger_a3beaddadd6d051539029a08ceec9faa6}{operator$<$$<$}} (std\+::ostream \&(\texorpdfstring{$\ast$}{*}manip)(std\+::ostream \&))
+\begin{DoxyCompactList}\small\item\em Overload the \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator to handle manipulators (like std\+::endl). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLogger}{Logger}} \& \mbox{\hyperlink{classLogger_aa3ea38712b6cd63ae40f094660c23155}{operator$<$$<$}} (std\+::ios\+\_\+base \&(\texorpdfstring{$\ast$}{*}manip)(std\+::ios\+\_\+base \&))
+\begin{DoxyCompactList}\small\item\em Overload the \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator to handle other iostream manipulators. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classLogger}{Logger}} \& \mbox{\hyperlink{classLogger_ab800154fe06cf4d006da6bdd0e81ed48}{get\+Instance}} (const string \&filename="{}default.\+log"{})
+\begin{DoxyCompactList}\small\item\em Get the singleton instance of \doxylink{classLogger}{Logger}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A singleton logger class for logging messages to a file. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classLogger_add0f34d4c753c86af8074840a72366b3}\label{classLogger_add0f34d4c753c86af8074840a72366b3} 
+\index{Logger@{Logger}!Logger@{Logger}}
+\index{Logger@{Logger}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{Logger()}{Logger()}}
+{\footnotesize\ttfamily Logger\+::\+Logger (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classLogger}{Logger}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classLogger_ab800154fe06cf4d006da6bdd0e81ed48}\label{classLogger_ab800154fe06cf4d006da6bdd0e81ed48} 
+\index{Logger@{Logger}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classLogger}{Logger}} \& Logger\+::get\+Instance (\begin{DoxyParamCaption}\item[{const string \&}]{filename = {\ttfamily "{}default.log"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the singleton instance of \doxylink{classLogger}{Logger}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the log file (default is "{}default.\+log"{}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the \doxylink{classLogger}{Logger} instance. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{classLogger_ad7719f8cff26d3d337153e65382d9d95}\label{classLogger_ad7719f8cff26d3d337153e65382d9d95} 
+\index{Logger@{Logger}!log@{log}}
+\index{log@{log}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily void Logger\+::log (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{Logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9}{Log\+Level}}}]{level,  }\item[{const string \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Log a message with a specific log level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & The log level of the message. \\
+\hline
+{\em message} & The message to log. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{classLogger_af5ad544b52a74e4c49c756c43e732e1e}\label{classLogger_af5ad544b52a74e4c49c756c43e732e1e} 
+\index{Logger@{Logger}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLogger}{Logger}} \& Logger\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overload the \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator to log C-\/style string messages. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The C-\/style string message to log. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the \doxylink{classLogger}{Logger} instance. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 3
+\Hypertarget{classLogger_a013212d2d5fc33db285551c5daa88699}\label{classLogger_a013212d2d5fc33db285551c5daa88699} 
+\index{Logger@{Logger}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLogger}{Logger}} \& Logger\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{const int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overload the \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator to log integer values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The integer value to log. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the \doxylink{classLogger}{Logger} instance. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 4
+\Hypertarget{classLogger_ac369983ab6f3668eae7f389851a88b97}\label{classLogger_ac369983ab6f3668eae7f389851a88b97} 
+\index{Logger@{Logger}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLogger}{Logger}} \& Logger\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{Logger_8hpp_aca1fd1d8935433e6ba2e3918214e07f9}{Log\+Level}}}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overload the \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator to set the current log level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & The log level to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the \doxylink{classLogger}{Logger} instance. 
+\end{DoxyReturn}
+\Hypertarget{classLogger_a7a4ccab079ff737cef378ab1d93843ca}\label{classLogger_a7a4ccab079ff737cef378ab1d93843ca} 
+\index{Logger@{Logger}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLogger}{Logger}} \& Logger\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{const string \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overload the \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator to log string messages. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The string message to log. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the \doxylink{classLogger}{Logger} instance. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 5
+\Hypertarget{classLogger_aa3ea38712b6cd63ae40f094660c23155}\label{classLogger_aa3ea38712b6cd63ae40f094660c23155} 
+\index{Logger@{Logger}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLogger}{Logger}} \& Logger\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ios\+\_\+base \&(\texorpdfstring{$\ast$}{*})(std\+::ios\+\_\+base \&)}]{manip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overload the \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator to handle other iostream manipulators. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manip} & The manipulator to apply. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the \doxylink{classLogger}{Logger} instance. 
+\end{DoxyReturn}
+\Hypertarget{classLogger_a3beaddadd6d051539029a08ceec9faa6}\label{classLogger_a3beaddadd6d051539029a08ceec9faa6} 
+\index{Logger@{Logger}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLogger}{Logger}} \& Logger\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&(\texorpdfstring{$\ast$}{*})(std\+::ostream \&)}]{manip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overload the \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator to handle manipulators (like std\+::endl). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manip} & The manipulator to apply. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the \doxylink{classLogger}{Logger} instance. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 6
+\Hypertarget{classLogger_a8c0ca770cdc91ca9fc3015286568e1ea}\label{classLogger_a8c0ca770cdc91ca9fc3015286568e1ea} 
+\index{Logger@{Logger}!operator=@{operator=}}
+\index{operator=@{operator=}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLogger}{Logger}} \& Logger\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classLogger}{Logger}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Logger_8hpp}{Logger.\+hpp}}\end{DoxyCompactItemize}
