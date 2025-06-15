@@ -1,7 +1,9 @@
 #include <iostream>
+#ifdef __linux__
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <unistd.h>
+#endif
 
 #include "Logger.hpp"
 #include "OCEngine.hpp"
@@ -13,12 +15,12 @@ TcpServer server;
 string incomingCharacterBuffer;
 Logger *logger;
 
-void onConnect(const int fd)
+void onConnect(const SOCKET fd)
 {
     *logger << INFO << "Connected on fd: " << fd << " IP: " << getIPbyFD(fd) << std::endl;
 }
 
-void onInput(const int fd, const char* incomingSocketData)
+void onInput(const SOCKET fd, const char* incomingSocketData)
 {
 
     string cmdLine;
@@ -34,7 +36,7 @@ void onInput(const int fd, const char* incomingSocketData)
     }
 }
 
-void onDisconnect(const int fd)
+void onDisconnect(const SOCKET fd)
 {
     *logger << INFO << "Disconnected on fd: " << fd << " IP: " << getIPbyFD(fd) << std::endl;
 }
