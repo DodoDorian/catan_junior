@@ -15,12 +15,12 @@ TcpServer server;
 string incomingCharacterBuffer;
 Logger *logger;
 
-void onConnect(const SOCKET fd)
+void onConnect(const int fd)
 {
     *logger << INFO << "Connected on fd: " << fd << " IP: " << getIPbyFD(fd) << std::endl;
 }
 
-void onInput(const SOCKET fd, const char* incomingSocketData)
+void onInput(const int fd, const char* incomingSocketData)
 {
 
     string cmdLine;
@@ -36,7 +36,7 @@ void onInput(const SOCKET fd, const char* incomingSocketData)
     }
 }
 
-void onDisconnect(const SOCKET fd)
+void onDisconnect(const int fd)
 {
     *logger << INFO << "Disconnected on fd: " << fd << " IP: " << getIPbyFD(fd) << std::endl;
 }
